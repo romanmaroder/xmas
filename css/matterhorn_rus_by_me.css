@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Matterhorn [Rus by me]';
+	src: url('../fonts/matterhorn_rus_by_me.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/matterhorn_rus_by_me.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/matterhorn_rus_by_me.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/matterhorn_rus_by_me.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/matterhorn_rus_by_me.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/matterhorn_rus_by_me.svg#matterhorn_rus_by_me') format('svg'); /* Chrome < 4, Legacy iOS */
+}

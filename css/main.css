@@ -1,0 +1,526 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+@font-face {
+  font-family: 'Matterhorn [Rus by me]';
+  src: url('/css/fonts/matterhorn_rus_by_me.eot'); /* IE 9 Compatibility Mode */
+  src: url('/css/fonts/matterhorn_rus_by_me.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+  url('/css/fonts/matterhorn_rus_by_me.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/css/fonts/matterhorn_rus_by_me.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+  url('/css/fonts/matterhorn_rus_by_me.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/css/fonts/matterhorn_rus_by_me.svg#matterhorn_rus_by_me') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+:root {
+  --color-bg: radial-gradient(circle farthest-corner at 50.4% 50.5%,
+  rgba(57, 181, 51, 1) 0%, rgba(35, 91, 32, 1) 90%);
+
+  --color-tree-back: linear-gradient(to left, rgb(1, 59, 1),
+  rgb(0, 175, 0), rgb(1, 59, 1));
+
+  --color-tree-front: linear-gradient(to left, rgb(0, 175, 0), rgb(24, 24, 23), rgb(0, 175, 0));
+
+  --color-star-dark: rgb(255, 166, 0);
+  --color-star-light: linear-gradient(109.6deg, rgba(255, 219, 47, 1) 11.2%, rgba(244, 253, 0, 1) 100.2%);
+}
+
+.wrapper-tree {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: var(--color-bg);
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: bg-animation 6s ease infinite;
+}
+
+@keyframes bg-animation {
+  0%, 100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.inner-tree {
+  width: 20rem;
+  position: relative;
+}
+
+.star {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--color-star-dark);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  position: absolute;
+  left: 52%;
+  top: 0;
+  transform: translate(-50%, -70%);
+  z-index: 12;
+  animation: rotate 4s linear infinite;
+}
+
+.star::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: var(--color-star-light);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -70%) rotate(360deg);
+  }
+}
+
+.tree {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree > div {
+  height: 3rem;
+  background-image: var(--color-tree-back);
+  clip-path: polygon(0 40%, 100% 0, 100% 60%, 0% 100%);
+  position: relative;
+  z-index: 11;
+  margin-top: -1.6rem;
+}
+
+.tree > div:nth-of-type(even) {
+  background-image: var(--color-tree-front);
+  clip-path: polygon(0 0%, 100% 40%, 100% 100%, 0 60%);
+  margin-top: -1.6rem;
+  transform: rotate(2deg);
+  position: relative;
+  z-index: 1;
+  margin-left: 1rem;
+}
+
+.tree > div:nth-of-type(1) {
+  width: 4rem;
+  height: 5rem;
+  clip-path: polygon(60% 0%, 100% 50%, 0% 100%, 0% 60%);
+}
+
+.tree > div:nth-of-type(2) {
+  width: 5rem;
+}
+
+.tree > div:nth-of-type(3) {
+  width: 6rem;
+}
+
+.tree > div:nth-of-type(4) {
+  width: 7rem;
+}
+
+.tree > div:nth-of-type(5) {
+  width: 8rem;
+}
+
+.tree > div:nth-of-type(6) {
+  width: 9rem;
+}
+
+.tree > div:nth-of-type(7) {
+  width: 10rem;
+}
+
+.tree > div:nth-of-type(8) {
+  width: 11rem;
+}
+
+.tree > div:nth-of-type(9) {
+  width: 12rem;
+}
+
+.tree > div:nth-of-type(10) {
+  width: 13rem;
+}
+
+.tree > div:nth-of-type(11) {
+  width: 14rem;
+}
+
+.tree > div:nth-of-type(12) {
+  width: 15rem;
+}
+
+.tree > div:nth-of-type(13) {
+  width: 16rem;
+}
+
+.tree > div:nth-of-type(14) {
+  width: 17rem;
+}
+
+.tree > div:nth-of-type(15) {
+  width: 14rem;
+  height: 2rem;
+  margin-left: 4rem;
+  clip-path: polygon(100% 3%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.base {
+  width: 5rem;
+  height: 2rem;
+  background-image: var(--color-star-light);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  position: relative;
+  left: 52%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.shadow {
+  width: 12rem;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 50%;
+  position: relative;
+  filter: blur(6px);
+  left: 52%;
+  bottom: 5px;
+  transform: translateX(-50%);
+}
+
+.small-star {
+  position: absolute;
+  top: 0;
+  left: var(--left);
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-star-dark);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: falling-star 2s var(--delay) linear infinite backwards;
+  z-index: 2;
+}
+
+.small-star:nth-child(2),
+.small-star:nth-child(6),
+.small-star:nth-child(8) {
+  width: 1rem;
+  height: 1rem;
+  filter: blur(10px);
+}
+
+@keyframes falling-star {
+  0% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translate(10vw, 95vh);
+  }
+}
+
+.wish-title {
+  position: absolute;
+  bottom: 4rem;
+  font-family: 'Matterhorn [Rus by me]', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.wish-letter {
+  background-image: var(--color-star-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.wish-letter:nth-of-type(1),
+.wish-letter:nth-of-type(4) {
+  animation: updown .8s .1s infinite reverse;
+}
+
+.wish-letter:nth-of-type(5),
+.wish-letter:nth-of-type(9),
+.wish-letter:nth-of-type(12) {
+  animation: updown .7s .1s infinite;
+}
+.wish-letter:nth-of-type(4),
+.wish-letter:nth-of-type(7),
+.wish-letter:nth-of-type(10) ,
+.wish-letter:nth-of-type(13) {
+  animation: updown .8s .2s infinite;
+}
+
+@keyframes updown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+}
